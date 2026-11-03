@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbalife Nutrition Store</title>
+  <link rel="stylesheet" href="/style.css?v=about-transparent">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#"><span>✦</span> HERBALIFE <small>NUTRITION STORE</small></a>
+    <nav>
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#products">Produk</a>
+      <a href="#orders">Pesanan</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">NUTRISI UNTUK AKTIVITAS HARIAN</p>
+        <h1>Mulai pilihan<br><em>hidup lebih sehat.</em></h1>
+        <p class="hero-desc">Temukan pilihan produk nutrisi dan minuman Herbalife dalam satu katalog.</p>
+        <a class="button primary" href="#products">Jelajahi Produk <span>→</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="circle circle-one"></div>
+        <div class="circle circle-two"></div>
+        <div class="hero-symbol">H<span>+</span></div>
+        <p>NUTRITION<br>WELLNESS</p>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="about-copy">
+        <p class="eyebrow">MENGENAL PRODUK</p>
+        <h2>Apa itu susu nutrisi Herbalife?</h2>
+        <p>Formula 1 Herbalife adalah campuran minuman berbentuk bubuk yang dapat disajikan sebagai shake. Produk ini tersedia dalam beberapa varian rasa; komposisi dan informasi gizinya dapat berbeda sesuai varian dan negara.</p>
+        <p>Untuk menyiapkannya, ikuti takaran dan petunjuk penyajian pada label kemasan produk yang Anda miliki.</p>
+        <a class="button primary" href="#products">Lihat Produk <span>→</span></a>
+      </div>
+      <aside class="about-note">
+        <span class="about-icon" aria-hidden="true">🥛</span>
+        <h3>Periksa label sebelum digunakan</h3>
+        <p>Selalu baca daftar bahan, informasi alergen, nilai gizi, dan petunjuk penyajian pada kemasan. Produk ini bukan pengganti saran dari tenaga kesehatan.</p>
+      </aside>
+    </section>
+
+    <section id="products" class="section">
+      <div class="section-title">
+        <div><p class="eyebrow">KATALOG PRODUK</p><h2>Produk pilihan</h2></div>
+        <input id="search" class="search" type="search" placeholder="Cari produk..." aria-label="Cari produk">
+      </div>
+      <div id="product-list" class="product-grid">
+        <p>Memuat produk...</p>
+      </div>
+    </section>
+
+    <section class="checkout section">
+      <div>
+        <p class="eyebrow">CHECKOUT</p>
+        <h2>Buat pesanan</h2>
+        <p class="muted">Isi data pelanggan dan pilih produk yang ingin dipesan.</p>
+        <div class="note">Ini merupakan prototipe pembelajaran. Pesanan hanya tersimpan di database lokal, belum memproses pembayaran.</div>
+      </div>
+      <form id="order-form">
+        <label>Nama pelanggan
+          <input name="customer_name" required minlength="2" placeholder="Masukkan nama">
+        </label>
+        <label>Nomor telepon
+          <input name="customer_phone" required minlength="8" placeholder="08xxxxxxxxxx">
+        </label>
+        <label>Pilih produk
+          <select name="product_id" id="product-select" required></select>
+        </label>
+        <label>Jumlah
+          <input name="quantity" type="number" min="1" value="1" required>
+        </label>
+        <button class="button primary" type="submit">Buat Pesanan</button>
+        <p id="message" role="status"></p>
+      </form>
+    </section>
+
+    <section id="orders" class="section">
+      <div class="section-title"><div><p class="eyebrow">TRANSAKSI</p><h2>Riwayat pesanan</h2></div></div>
+      <p id="order-message" role="status" aria-live="polite"></p>
+      <div id="order-list" class="order-list">Belum ada pesanan.</div>
+    </section>
+  </main>
+
+  <footer><strong>Muhammad Hanan Annafi</strong><span>RESTful API · ELYSIA · TYPESCRIPT</span></footer>
+  <script src="/app.js?v=order-delete-no-stock"></script>
+</body>
+</html>
